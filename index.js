@@ -247,7 +247,10 @@ app.delete("/hotels/:hotelId", async (req, res) => {
   }
 });
 
-const PORT = 3002;
-app.listen(PORT, () => {
-  console.log("Server is running on , ", PORT);
-});
+// const PORT = 3002;
+// app.listen(PORT, () => {
+//   console.log("Server is running on , ", PORT);
+// });
+app.get("/favicon.ico", (req, res) => res.status(204).end());
+
+module.exports = app;
